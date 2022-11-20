@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --ci --reporters=default --reporters=jest-junit"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   "prettier": {
     "singleQuote": true,
     "printWidth": 80
+  },
+  "dependencies": {
+    "jest-junit": "^15.0.0"
   }
 }

@@ -1,13 +1,13 @@
 import { entries, fromEntries, keys, values } from '../index';
 
-describe('All functions', function () {
-  describe('keys', function () {
+describe('Object method', function () {
+  describe('"keys"', function () {
     it('should returns correct value', () => {
       expect(keys({ name: 'name', value: 'value' })).toEqual(['name', 'value']);
     });
   });
 
-  describe('values', function () {
+  describe('"values"', function () {
     it('should returns correct value', () => {
       expect(values({ name: 'name1', value: 'value1' })).toEqual([
         'name1',
@@ -16,7 +16,7 @@ describe('All functions', function () {
     });
   });
 
-  describe('entries', function () {
+  describe('"entries"', function () {
     it('should returns correct value', () => {
       expect(entries({ name: 'name1', value: 'value1' })).toEqual([
         ['name', 'name1'],
@@ -25,7 +25,7 @@ describe('All functions', function () {
     });
   });
 
-  describe('fromEntries', function () {
+  describe('"fromEntries"', function () {
     it('should returns correct value', () => {
       expect(
         fromEntries([

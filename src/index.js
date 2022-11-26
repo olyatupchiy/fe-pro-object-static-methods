@@ -32,7 +32,7 @@ export const values = (object) => {
  * @returns {[string, any][]}
  */
 export const entries = (object) => {
-  let entries = {};
+  let entries = [];
   for (let key in object) {
     let newEntry = [key, object[key]];
     entries.push(newEntry);

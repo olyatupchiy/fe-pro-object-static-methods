@@ -34,10 +34,8 @@ export const values = (object) => {
 export const entries = (object) => {
   let entries = {};
   for (let key in object) {
-    entries.push(key);
-    for (let value in object) {
-      entries.push(key[value]);
-    }
+    let newEntry = [key, object[key]];
+    entries.push(newEntry);
   }
   return entries;
 };
@@ -50,5 +48,8 @@ export const entries = (object) => {
  */
 export const fromEntries = (entries) => {
   let object = {};
-  const { key, value} = entries;
+  for (let key of entries) {
+    object[key[0]] = key[1];
+  }
+  return object;
 };
